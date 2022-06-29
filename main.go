@@ -8,6 +8,7 @@ import (
 func main() {
 	s := newServer()
 
+	go s.run()
 	listener, err := net.Listen("tcp", ":8080")
 
 	if err != nil {
